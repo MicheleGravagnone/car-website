@@ -1,5 +1,5 @@
+import path from "node:path";
 import express from "express";
-import cors from "cors";
 import cookieParser from "cookie-parser";
 import { config } from "./config.js";
 import { initSchema } from "./db.js";
@@ -12,7 +12,6 @@ initSchema();
 
 const app = express();
 
-app.use(cors({ origin: config.clientOrigin, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(optionalAuth);
@@ -20,10 +19,13 @@ app.use(optionalAuth);
 app.get("/api/health", (_req, res) => res.json({ ok: true }));
 app.use("/api/auth", authRouter);
 app.use("/api/cars", carsRouter);
+app.use("/api", notFound);
 
-app.use(notFound);
+app.use(express.static(config.publicDir, { extensions: ["html"] }));
+app.use((_req, res) => res.status(404).sendFile(path.join(config.publicDir, "404.html")));
+
 app.use(errorHandler);
 
 app.listen(config.port, () => {
-  console.log(`API listening on http://localhost:${config.port}`);
+  console.log(`Server running on http://localhost:${config.port}`);
 });

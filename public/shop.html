@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/porsche_img1.png" />
+    <meta name="description" content="Browse the full Porsche model range." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Models — Porsche</title>
+    <script>
+      try {
+        var saved = localStorage.getItem("theme");
+        document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="grain">
+    <div id="header"></div>
+
+    <main class="page container">
+      <header class="page-head">
+        <div>
+          <p class="eyebrow">The collection</p>
+          <h1>Models</h1>
+        </div>
+        <p class="count" id="count"></p>
+      </header>
+
+      <div class="filters" id="filters"></div>
+      <div class="shop-grid" id="grid"></div>
+    </main>
+
+    <div id="footer"></div>
+    <script type="module" src="/js/shop.js"></script>
+  </body>
+</html>

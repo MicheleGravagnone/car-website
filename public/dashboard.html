@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/porsche_img1.png" />
+    <meta name="description" content="Your Porsche garage." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Dashboard — Porsche</title>
+    <script>
+      try {
+        var saved = localStorage.getItem("theme");
+        document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="grain">
+    <div id="header"></div>
+
+    <main id="dashboard" hidden>
+      <section class="dash-hero">
+        <img src="/img/dashboard_image.jpg" alt="" />
+        <div class="veil"></div>
+        <div class="inner container">
+          <p class="eyebrow">Your garage</p>
+          <h1 id="greeting">Welcome.</h1>
+          <p class="clock"><span id="clockDate"></span> — <span class="t" id="clockTime"></span></p>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="dash-grid">
+          <div class="reveal">
+            <p class="eyebrow">Account</p>
+            <h2 style="font-size:1.875rem;margin-top:.5rem">My details</h2>
+            <dl class="details" id="details"></dl>
+          </div>
+
+          <div class="reveal" style="transition-delay:.1s">
+            <div class="unlocked">
+              <div>
+                <p class="eyebrow">Unlocked</p>
+                <h2 style="margin-top:1.5rem">Full performance figures are now yours to explore.</h2>
+                <p>
+                  As a member you can view complete specifications — horsepower, acceleration and top
+                  track speed — across the entire range.
+                </p>
+              </div>
+              <a class="btn btn-accent" href="/shop.html">View our cars <span class="arrow">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
+</html>

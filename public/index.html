@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/img/porsche_img1.png" />
+    <meta name="description" content="Porsche — a showcase of sports cars engineered for magic, every day." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Porsche — Engineered for magic</title>
+    <script>
+      try {
+        var saved = localStorage.getItem("theme");
+        document.documentElement.setAttribute("data-theme", saved === "light" ? "light" : "dark");
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="grain">
+    <div id="header"></div>
+
+    <main>
+      <section class="hero">
+        <img class="hero-img" src="/img/img1.jpg" alt="" />
+        <div class="hero-veil"></div>
+        <div class="hero-vignette"></div>
+        <div class="hero-inner container">
+          <p class="eyebrow fade-up d1">Dr. Ing. h.c. F. Porsche</p>
+          <h1 class="hero-title fade-up d2">Porsche</h1>
+          <div class="hero-row fade-up d3">
+            <p class="hero-lead">Engineered for magic. Every day.</p>
+            <a class="btn btn-light" href="/shop.html">Explore the range <span class="arrow">→</span></a>
+          </div>
+        </div>
+        <div class="scroll-cue">
+          <span>Scroll</span>
+          <span class="stem"></span>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="split">
+          <div class="reveal">
+            <img class="cover-4x3" src="/img/img2.jpg" alt="Porsche on the road" />
+          </div>
+          <div class="reveal" style="transition-delay:.1s">
+            <p class="eyebrow">Performance, redefined</p>
+            <h2 class="section-title">A world where every drive is an exhilarating experience.</h2>
+            <p class="lead">
+              Embark on a journey through luxury and precision engineering. We transcend the
+              ordinary, crafting iconic sports cars that blend cutting-edge technology with
+              unparalleled design — pushing the boundaries of innovation and setting new standards
+              in automotive excellence.
+            </p>
+            <a class="link-line" href="/shop.html" style="margin-top:2.5rem"><span class="dash"></span>Browse models</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="container stats-grid">
+          <div class="stat reveal"><p class="stat-value">75</p><p class="stat-label">Years of sports cars</p></div>
+          <div class="stat reveal" style="transition-delay:.08s"><p class="stat-value">9</p><p class="stat-label">Models in the range</p></div>
+          <div class="stat reveal" style="transition-delay:.16s"><p class="stat-value">2.6s</p><p class="stat-label">Fastest 0–60 mph</p></div>
+          <div class="stat reveal" style="transition-delay:.24s"><p class="stat-value">640</p><p class="stat-label">Peak horsepower</p></div>
+        </div>
+      </section>
+
+      <section class="section container">
+        <div class="reveal">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">The range</p>
+              <h2>Our Models</h2>
+            </div>
+            <p class="note">Six families, one philosophy. Each built to take the everyday out of every day.</p>
+          </div>
+        </div>
+
+        <div class="grid-cards">
+          <a class="model-card reveal" href="/shop.html">
+            <div class="frame"><img src="/img/porsche_718.jpg" alt="718" loading="lazy" /></div>
+            <div class="veil"></div>
+            <div class="caption"><h3>718</h3><p>Mid-engined roadsters that unite the sporting spirit of the legendary 718 with the sports car of tomorrow.</p></div>
+          </a>
+          <a class="model-card reveal" href="/shop.html" style="transition-delay:.1s">
+            <div class="frame"><img src="/img/porsche_911.jpg" alt="911" loading="lazy" /></div>
+            <div class="veil"></div>
+            <div class="caption"><h3>911</h3><p>An unmistakable flyline that has defined the sports car since 1963. Purism, distilled.</p></div>
+          </a>
+          <a class="model-card reveal" href="/shop.html" style="transition-delay:.2s">
+            <div class="frame"><img src="/img/porsche_cayenne.jpg" alt="Cayenne" loading="lazy" /></div>
+            <div class="veil"></div>
+            <div class="caption"><h3>Cayenne</h3><p>Driving pleasure on every terrain, paired with the design typical of a Porsche.</p></div>
+          </a>
+          <a class="model-card reveal" href="/shop.html">
+            <div class="frame"><img src="/img/porsche_panamera.jpg" alt="Panamera" loading="lazy" /></div>
+            <div class="veil"></div>
+            <div class="caption"><h3>Panamera</h3><p>For those who use freedom to follow their instincts — a sports car that seats four.</p></div>
+          </a>
+          <a class="model-card reveal" href="/shop.html" style="transition-delay:.1s">
+            <div class="frame"><img src="/img/porsche_taycan.jpg" alt="Taycan" loading="lazy" /></div>
+            <div class="veil"></div>
+            <div class="caption"><h3>Taycan</h3><p>Electricity, made electrifying. Performance even more impressive than you imagined.</p></div>
+          </a>
+          <a class="model-card reveal" href="/shop.html" style="transition-delay:.2s">
+            <div class="frame"><img src="/img/porsche_macan.jpg" alt="Macan" loading="lazy" /></div>
+            <div class="veil"></div>
+            <div class="caption"><h3>Macan</h3><p>Five doors, five seats — yet incomparable, unmistakable and unstoppable.</p></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="cta">
+        <img src="/img/img3.jpg" alt="" />
+        <div class="veil"></div>
+        <div class="cta-inner reveal">
+          <h2>Find the Porsche that is yours.</h2>
+          <p>Create an account to unlock full performance figures and configure every model in the range.</p>
+          <a class="btn btn-accent" href="/signup.html">Create account</a>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+    <script type="module" src="/js/home.js"></script>
+  </body>
+</html>
