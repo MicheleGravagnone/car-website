@@ -13,10 +13,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      
-    defaults:
-      run:
-        working-directory: ./client
 
     steps:
       - uses: actions/checkout@v4
@@ -25,7 +21,6 @@ jobs:
         with:
           node-version: 24
           cache: 'npm'
-          cache-dependency-path: 'package-lock.json' 
           
       - run: npm ci
       
@@ -36,7 +31,7 @@ jobs:
           
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: './client/build' 
+          path: './build' 
           
       - name: Deploy to GitHub Pages
         id: deployment
