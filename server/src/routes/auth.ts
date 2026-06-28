@@ -1,11 +1,20 @@
 import { Router } from "express";
 import bcrypt from "bcryptjs";
 import { z } from "zod";
+import rateLimit from "express-rate-limit";
 import { db } from "../db.js";
 import { AUTH_COOKIE, cookieOptions, signToken } from "../lib/auth.js";
 import { requireAuth } from "../middleware/auth.js";
 
 export const authRouter = Router();
+
+const credentialLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 12,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "Too many attempts, please try again later." },
+});
 
 const signupSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(60),
@@ -42,7 +51,7 @@ function publicUser(u: UserRow) {
   };
 }
 
-authRouter.post("/signup", (req, res, next) => {
+authRouter.post("/signup", credentialLimiter, (req, res, next) => {
   try {
     const data = signupSchema.parse(req.body);
 
@@ -67,7 +76,7 @@ authRouter.post("/signup", (req, res, next) => {
   }
 });
 
-authRouter.post("/login", (req, res, next) => {
+authRouter.post("/login", credentialLimiter, (req, res, next) => {
   try {
     const data = loginSchema.parse(req.body);
     const user = db

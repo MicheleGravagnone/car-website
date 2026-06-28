@@ -1,6 +1,8 @@
 import path from "node:path";
 import express from "express";
 import cookieParser from "cookie-parser";
+import helmet from "helmet";
+import morgan from "morgan";
 import { config } from "./config.js";
 import { initSchema } from "./db.js";
 import { optionalAuth } from "./middleware/auth.js";
@@ -12,6 +14,22 @@ initSchema();
 
 const app = express();
 
+app.use(
+  helmet({
+    crossOriginEmbedderPolicy: false,
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'", "'unsafe-inline'"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+        fontSrc: ["'self'", "https://fonts.gstatic.com"],
+        imgSrc: ["'self'", "data:"],
+        connectSrc: ["'self'"],
+      },
+    },
+  })
+);
+app.use(morgan(config.isProduction ? "combined" : "dev"));
 app.use(express.json());
 app.use(cookieParser());
 app.use(optionalAuth);

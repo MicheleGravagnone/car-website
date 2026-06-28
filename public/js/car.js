@@ -40,7 +40,7 @@ function lockedSpecs() {
           <path d="M6 10V8a6 6 0 1 1 12 0v2m-9 0h6a3 3 0 0 1 3 3v5a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-5a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <p>Sign in to reveal the full performance figures for this model.</p>
-        <a class="btn btn-light" href="/login.html?from=${encodeURIComponent(location.pathname + location.search)}">Log in</a>
+        <a class="btn btn-accent" href="/login.html?from=${encodeURIComponent(location.pathname + location.search)}">Log in</a>
       </div>
     </div>`;
 }

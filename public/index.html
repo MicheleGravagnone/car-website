@@ -36,6 +36,7 @@
         <div class="scroll-cue">
           <span>Scroll</span>
           <span class="stem"></span>
+          <svg class="chevron" width="12" height="7" viewBox="0 0 12 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 1l5 5 5-5"/></svg>
         </div>
       </section>
 
@@ -60,55 +61,47 @@
 
       <section class="stats">
         <div class="container stats-grid">
-          <div class="stat reveal"><p class="stat-value">75</p><p class="stat-label">Years of sports cars</p></div>
-          <div class="stat reveal" style="transition-delay:.08s"><p class="stat-value">9</p><p class="stat-label">Models in the range</p></div>
-          <div class="stat reveal" style="transition-delay:.16s"><p class="stat-value">2.6s</p><p class="stat-label">Fastest 0–60 mph</p></div>
-          <div class="stat reveal" style="transition-delay:.24s"><p class="stat-value">640</p><p class="stat-label">Peak horsepower</p></div>
+          <div class="stat reveal"><p class="stat-value" data-countup="75">75</p><p class="stat-label">Years of sports cars</p></div>
+          <div class="stat reveal" style="transition-delay:.08s"><p class="stat-value" data-countup="9">9</p><p class="stat-label">Models in the range</p></div>
+          <div class="stat reveal" style="transition-delay:.16s"><p class="stat-value" data-countup="2.6" data-suffix="s">2.6s</p><p class="stat-label">Fastest 0–60 mph</p></div>
+          <div class="stat reveal" style="transition-delay:.24s"><p class="stat-value" data-countup="640">640</p><p class="stat-label">Peak horsepower</p></div>
         </div>
       </section>
 
       <section class="section container">
         <div class="reveal">
-          <div class="section-head">
-            <div>
-              <p class="eyebrow">The range</p>
-              <h2>Our Models</h2>
-            </div>
-            <p class="note">Six families, one philosophy. Each built to take the everyday out of every day.</p>
-          </div>
+          <p class="eyebrow">The Porsche formula</p>
+          <h2 class="formula-title">Three objectives.<br><em>One result.</em></h2>
         </div>
 
-        <div class="grid-cards">
-          <a class="model-card reveal" href="/shop.html">
-            <div class="frame"><img src="/img/porsche_718.jpg" alt="718" loading="lazy" /></div>
-            <div class="veil"></div>
-            <div class="caption"><h3>718</h3><p>Mid-engined roadsters that unite the sporting spirit of the legendary 718 with the sports car of tomorrow.</p></div>
-          </a>
-          <a class="model-card reveal" href="/shop.html" style="transition-delay:.1s">
-            <div class="frame"><img src="/img/porsche_911.jpg" alt="911" loading="lazy" /></div>
-            <div class="veil"></div>
-            <div class="caption"><h3>911</h3><p>An unmistakable flyline that has defined the sports car since 1963. Purism, distilled.</p></div>
-          </a>
-          <a class="model-card reveal" href="/shop.html" style="transition-delay:.2s">
-            <div class="frame"><img src="/img/porsche_cayenne.jpg" alt="Cayenne" loading="lazy" /></div>
-            <div class="veil"></div>
-            <div class="caption"><h3>Cayenne</h3><p>Driving pleasure on every terrain, paired with the design typical of a Porsche.</p></div>
-          </a>
-          <a class="model-card reveal" href="/shop.html">
-            <div class="frame"><img src="/img/porsche_panamera.jpg" alt="Panamera" loading="lazy" /></div>
-            <div class="veil"></div>
-            <div class="caption"><h3>Panamera</h3><p>For those who use freedom to follow their instincts — a sports car that seats four.</p></div>
-          </a>
-          <a class="model-card reveal" href="/shop.html" style="transition-delay:.1s">
-            <div class="frame"><img src="/img/porsche_taycan.jpg" alt="Taycan" loading="lazy" /></div>
-            <div class="veil"></div>
-            <div class="caption"><h3>Taycan</h3><p>Electricity, made electrifying. Performance even more impressive than you imagined.</p></div>
-          </a>
-          <a class="model-card reveal" href="/shop.html" style="transition-delay:.2s">
-            <div class="frame"><img src="/img/porsche_macan.jpg" alt="Macan" loading="lazy" /></div>
-            <div class="veil"></div>
-            <div class="caption"><h3>Macan</h3><p>Five doors, five seats — yet incomparable, unmistakable and unstoppable.</p></div>
-          </a>
+        <div class="pillars">
+          <div class="pillar reveal">
+            <img src="/img/design.jpg" alt="" loading="lazy" />
+            <div class="pillar-veil"></div>
+            <div class="pillar-body">
+              <span class="pillar-num">01</span>
+              <h3>Design</h3>
+              <p>Every curve shaped by function. Every line born from intent. A silhouette unmistakable because it was never designed to be anything other than itself.</p>
+            </div>
+          </div>
+          <div class="pillar reveal" style="transition-delay:.1s">
+            <img src="/img/performance.jpg" alt="" loading="lazy" />
+            <div class="pillar-veil"></div>
+            <div class="pillar-body">
+              <span class="pillar-num">02</span>
+              <h3>Performance</h3>
+              <p>Numbers that rearrange your understanding of what is possible. Not as a goal — as a byproduct of building something perfect.</p>
+            </div>
+          </div>
+          <div class="pillar reveal" style="transition-delay:.2s">
+            <img src="/img/heritage.jpg" alt="" loading="lazy" />
+            <div class="pillar-veil"></div>
+            <div class="pillar-body">
+              <span class="pillar-num">03</span>
+              <h3>Heritage</h3>
+              <p>More than 75 years of unbroken pursuit. Every new model carries the weight — and the freedom — of everything that came before it.</p>
+            </div>
+          </div>
         </div>
       </section>
 
